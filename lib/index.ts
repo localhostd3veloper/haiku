@@ -44,6 +44,7 @@ export { usePermission, UsePermissionState } from './hooks/usePermission';
 export { useTimer } from './hooks/useTimer';
 export { useWebSocket } from './hooks/useWebSocket';
 export { useGeolocation } from './hooks/useGeolocation';
+export { usePointerFine } from './hooks/usePointerFine';
 
 export { If } from './utils/If';
 export { Show } from './utils/Show';
