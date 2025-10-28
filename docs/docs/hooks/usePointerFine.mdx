@@ -1,0 +1,43 @@
+# usePointerFine()
+
+The `usePointerFine()` hook detects whether the user's primary input mechanism is a fine-grained pointer device (like a mouse, stylus, or touchpad). This is useful for adapting UI behavior based on input capabilities.
+
+> Uses the CSS media query [`(pointer: fine)`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/pointer#fine) to detect precise pointing devices. Automatically updates when device orientation changes.
+
+### Import
+
+```jsx
+import { usePointerFine } from 'react-haiku';
+```
+
+### Usage
+
+import { UsePointerFineDemo } from '../../demo/UsePointerFineDemo.jsx';
+
+<UsePointerFineDemo />
+
+```jsx
+import { usePointerFine } from 'react-haiku';
+
+export const Component = () => {
+  const hasFinePointer = usePointerFine();
+
+  return (
+    <div>
+      {hasFinePointer
+        ? "🖱️ You're using a mouse or other fine pointer!"
+        : '📱 Touch or coarse pointer detected'}
+    </div>
+  );
+};
+```
+
+### API
+
+#### Arguments
+
+- This hook requires no arguments
+
+#### Returns
+
+- `isPointerFine` - Boolean indicating whether the primary input device supports fine-grained pointing (true = fine pointer like mouse/stylus, false = coarse pointer like touch)
